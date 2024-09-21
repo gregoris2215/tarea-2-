@@ -1,0 +1,70 @@
+@page "/ej022"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro una matriz 3x4 entera y retorne la cantidad de veces que se repite el mayor número primo de la matriz.</h5>
+
+@for (int i = 0; i < 3; i++)
+{
+    <div>
+        @for (int j = 0; j < 4; j++)
+        {
+            <input @bind="numArray[i, j]" type="number" placeholder="Ingresa un número" />
+        }
+    </div>
+}
+
+<button @onclick="FindMaxPrimeFrequency">Encontrar frecuencia del mayor primo</button>
+
+<p>La cantidad de veces que se repite el mayor número primo es: @maxPrimeFrequency</p>
+
+@code {
+    private int[,] numArray = new int[3, 4];
+    private int maxPrimeFrequency;
+
+    private void FindMaxPrimeFrequency()
+    {
+        maxPrimeFrequency = GetMaxPrimeFrequency(numArray);
+    }
+
+    private int GetMaxPrimeFrequency(int[,] numA)
+    {
+        int numB = int.MinValue;
+        int numC = 0;
+
+        
+        for (int numD = 0; numD < numA.GetLength(0); numD++)
+        {
+            for (int numE = 0; numE < numA.GetLength(1); numE++)
+            {
+                if (IsPrime(numA[numD, numE]) && numA[numD, numE] > numB)
+                {
+                    numB = numA[numD, numE];
+                }
+            }
+        }
+
+        
+        for (int numF = 0; numF < numA.GetLength(0); numF++)
+        {
+            for (int numG = 0; numG < numA.GetLength(1); numG++)
+            {
+                if (numA[numF, numG] == numB)
+                {
+                    numC++;
+                }
+            }
+        }
+
+        return numC;
+    }
+
+    private bool IsPrime(int numH)
+    {
+        if (numH <= 1) return false;
+        for (int numI = 2; numI <= Math.Sqrt(numH); numI++)
+        {
+            if (numH % numI == 0) return false;
+        }
+        return true;
+    }
+}

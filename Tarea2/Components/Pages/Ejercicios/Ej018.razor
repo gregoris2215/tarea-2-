@@ -1,0 +1,36 @@
+@page "/ej018"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y retorne en ese elemento de la serie de fibonacci.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa la posición en la serie de Fibonacci" />
+<button @onclick="FindFibonacciElement">Encontrar</button>
+
+<p>El elemento de la serie de Fibonacci es: @fibonacciElement</p>
+
+@code {
+    private int numA;
+    private int fibonacciElement;
+
+    private void FindFibonacciElement()
+    {
+        fibonacciElement = GetFibonacciElement(numA);
+    }
+
+    private int GetFibonacciElement(int numA)
+    {
+        if (numA <= 0) return 0;
+        if (numA == 1) return 1;
+
+        int numB = 0, numC = 1, numD = 0;
+
+        for (int numE = 2; numE <= numA; numE++)
+        {
+            numD = numB + numC;
+            numB = numC;
+            numC = numD;
+        }
+
+        return numD;
+    }
+}

@@ -1,0 +1,24 @@
+@page "/ej01"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y retorne a sus dos últimos dígitos.</h5>
+
+<input @bind="numd" type="number" placeholder="Ingresa un número" />
+<button @onclick="GetLastTwoDigits">Obtener</button>
+
+<p>Los dos últimos dígitos son: @nums</p>
+
+@code {
+    private int numd;
+    private int nums;
+
+    private void GetLastTwoDigits()
+    {
+        nums = GetLastTwoDigitsFromNumber(numd);
+    }
+
+    private int GetLastTwoDigitsFromNumber(int number)
+    {
+        return Math.Abs(number % 100);
+    }
+}

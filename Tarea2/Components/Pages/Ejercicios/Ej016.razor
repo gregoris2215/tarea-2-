@@ -1,0 +1,33 @@
+@page "/ej016"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un vector de 10 posiciones enteras y retorna el promedio real del vector.</h5>
+
+@for (int i = 0; i < 10; i++)
+{
+    <input @bind="numArray[i]" type="number" placeholder="Ingresa un número" />
+}
+
+<button @onclick="CalculateAverage">Calcular promedio</button>
+
+<p>El promedio es: @average</p>
+
+@code {
+    private int[] numArray = new int[10];
+    private double average;
+
+    private void CalculateAverage()
+    {
+        average = GetAverage(numArray);
+    }
+
+    private double GetAverage(int[] numA)
+    {
+        int numB = 0;
+        foreach (int numC in numA)
+        {
+            numB += numC;
+        }
+        return (double)numB / numA.Length;
+    }
+}

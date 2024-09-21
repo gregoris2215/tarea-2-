@@ -1,0 +1,26 @@
+@page "/ej07"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro dos números enteros y retorna el valor del mayor.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa el primer número" />
+<input @bind="numB" type="number" placeholder="Ingresa el segundo número" />
+<button @onclick="FindMaxValue">Encontrar</button>
+
+<p>El valor mayor es: @maxValue</p>
+
+@code {
+    private int numA;
+    private int numB;
+    private int maxValue;
+
+    private void FindMaxValue()
+    {
+        maxValue = GetMaxValue(numA, numB);
+    }
+
+    private int GetMaxValue(int numA, int numB)
+    {
+        return Math.Max(numA, numB);
+    }
+}

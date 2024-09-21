@@ -1,0 +1,38 @@
+@page "/ej020"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un vector de 10 posiciones enteras y un dígito y que retorne la cantidad de números del vector que terminan en dicho dígito.</h5>
+
+@for (int i = 0; i < 10; i++)
+{
+    <input @bind="numArray[i]" type="number" placeholder="Ingresa un número" />
+}
+
+<input @bind="numB" type="number" placeholder="Ingresa un dígito" />
+<button @onclick="CountNumbersEndingInDigit">Contar números terminados en el dígito</button>
+
+<p>La cantidad de números terminados en @numB es: @count</p>
+
+@code {
+    private int[] numArray = new int[10];
+    private int numB;
+    private int count;
+
+    private void CountNumbersEndingInDigit()
+    {
+        count = GetCountOfNumbersEndingInDigit(numArray, numB);
+    }
+
+    private int GetCountOfNumbersEndingInDigit(int[] numA, int numB)
+    {
+        int numC = 0;
+        foreach (int numD in numA)
+        {
+            if (numD % 10 == numB)
+            {
+                numC++;
+            }
+        }
+        return numC;
+    }
+}

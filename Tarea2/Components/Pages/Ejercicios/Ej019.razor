@@ -1,0 +1,36 @@
+@page "/ej019"
+@rendermode InteractiveServer
+
+<h5>Construir una función perciba como parámetro un vector de 10 posiciones enteras y retorne Cantidad de números terminados en 3 que contiene el vector.</h5>
+
+@for (int i = 0; i < 10; i++)
+{
+    <input @bind="numArray[i]" type="number" placeholder="Ingresa un número" />
+}
+
+<button @onclick="CountNumbersEndingInThree">Contar números terminados en 3</button>
+
+<p>La cantidad de números terminados en 3 es: @count</p>
+
+@code {
+    private int[] numArray = new int[10];
+    private int count;
+
+    private void CountNumbersEndingInThree()
+    {
+        count = GetCountOfNumbersEndingInThree(numArray);
+    }
+
+    private int GetCountOfNumbersEndingInThree(int[] numA)
+    {
+        int numB = 0;
+        foreach (int numC in numA)
+        {
+            if (numC % 10 == 3)
+            {
+                numB++;
+            }
+        }
+        return numB;
+    }
+}

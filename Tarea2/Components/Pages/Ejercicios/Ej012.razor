@@ -1,0 +1,33 @@
+@page "/ej012"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro dos enteros de 2 dígitos cada 1 y retorne 1 si son inversos. Ejemplo 83, esta inverso de 38 debería retornar 0 si no es así.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa el primer número" />
+<input @bind="numB" type="number" placeholder="Ingresa el segundo número" />
+<button @onclick="CheckInverse">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int numB;
+    private int result;
+
+    private void CheckInverse()
+    {
+        result = AreNumbersInverse(numA, numB);
+    }
+
+    private int AreNumbersInverse(int numA, int numB)
+    {
+        string numCString = numA.ToString();
+        string numDString = numB.ToString();
+
+        char[] numEArray = numDString.ToCharArray();
+        Array.Reverse(numEArray);
+        string numFString = new string(numEArray);
+
+        return numCString == numFString ? 1 : 0;
+    }
+}

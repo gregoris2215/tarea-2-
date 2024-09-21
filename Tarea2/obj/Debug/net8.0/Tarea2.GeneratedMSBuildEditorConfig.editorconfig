@@ -1,0 +1,163 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Tarea2
+build_property.RootNamespace = Tarea2
+build_property.ProjectDir = G:\TareaBlazor3\Tarea2\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = G:\TareaBlazor3\Tarea2
+build_property._RazorSourceGeneratorDebug = 
+
+[G:/TareaBlazor3/Tarea2/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xBcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Acerca_de.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xBY2VyY2FfZGUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Counter.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xDb3VudGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej01.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDEucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej010.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDEwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej011.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDExLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej012.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDEyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej013.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDEzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej014.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej015.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE1LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej016.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE2LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej017.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE3LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej018.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE4LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej019.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDE5LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej02.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDIucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej020.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDIwLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej021.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDIxLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej022.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDIyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej023.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDIzLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej024.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDI0LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej025.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDI1LnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej03.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej04.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej05.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej06.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDYucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej07.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDcucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej08.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDgucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Ejercicios/Ej09.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFamVyY2ljaW9zXEVqMDkucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Error.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xFcnJvci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Weather.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xXZWF0aGVyLnJhem9y
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xSb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xfSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[G:/TareaBlazor3/Tarea2/Components/Layout/ItlaLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcSXRsYUxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-wphkt9je7f
+
+[G:/TareaBlazor3/Tarea2/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-fhg2jinoqu
+
+[G:/TareaBlazor3/Tarea2/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xMYXlvdXRcTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-hhtel1b6c4
+
+[G:/TareaBlazor3/Tarea2/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50c1xQYWdlc1xIb21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-rc1mr1oxk1

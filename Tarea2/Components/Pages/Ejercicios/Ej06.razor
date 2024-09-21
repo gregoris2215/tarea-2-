@@ -1,0 +1,37 @@
+@page "/ej06"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y un dígito y retorne 1 si Dicho dígito está en dicho entero o 0 si no es así.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<input @bind="numB" type="number" placeholder="Ingresa un dígito" />
+<button @onclick="CheckDigit">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int numB;
+    private int result;
+
+    private void CheckDigit()
+    {
+        result = IsDigitInNumber(numA, numB);
+    }
+
+    private int IsDigitInNumber(int numA, int numB)
+    {
+        string numCString = numA.ToString();
+        char numDChar = numB.ToString()[0];
+
+        foreach (char numEChar in numCString)
+        {
+            if (numEChar == numDChar)
+            {
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+}

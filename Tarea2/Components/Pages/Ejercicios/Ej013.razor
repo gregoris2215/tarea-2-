@@ -1,0 +1,36 @@
+@page "/ej013"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un vector de 10 posiciones enteras y retorne el mayor de los datos del vector.</h5>
+
+@for (int i = 0; i < 10; i++)
+{
+    <input @bind="numArray[i]" type="number" placeholder="Ingresa un número" />
+}
+
+<button @onclick="FindMaxValue">Encontrar el mayor valor</button>
+
+<p>El mayor valor es: @maxValue</p>
+
+@code {
+    private int[] numArray = new int[10];
+    private int maxValue;
+
+    private void FindMaxValue()
+    {
+        maxValue = GetMaxValue(numArray);
+    }
+
+    private int GetMaxValue(int[] numA)
+    {
+        int numB = numA[0];
+        for (int numC = 1; numC < numA.Length; numC++)
+        {
+            if (numA[numC] > numB)
+            {
+                numB = numA[numC];
+            }
+        }
+        return numB;
+    }
+}

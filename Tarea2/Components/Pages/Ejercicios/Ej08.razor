@@ -1,0 +1,28 @@
+@page "/ej08"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y retorne 1 si corresponde el código ASCII de una letra minúscula (Los códigos ascii de las letras minúsculas van desde el 48, que es el código del dígito cero hasta el 57, que es el código del dígito 9), Deberá retornar 0 si no es así.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<button @onclick="CheckAscii">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int result;
+
+    private void CheckAscii()
+    {
+        result = IsLowercaseAscii(numA);
+    }
+
+    private int IsLowercaseAscii(int numA)
+    {
+        if (numA >= 97 && numA <= 122)
+        {
+            return 1;
+        }
+        return 0;
+    }
+}

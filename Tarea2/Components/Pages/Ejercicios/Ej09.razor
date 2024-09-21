@@ -1,0 +1,51 @@
+@page "/ej09"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un valor entero y retorna 1 si ese valor es factorial de algunos de los dígitos del número. Deberia retornar 0 si no es asi.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<button @onclick="CheckFactorial">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int result;
+
+    private void CheckFactorial()
+    {
+        result = IsFactorialOfAnyDigit(numA);
+    }
+
+    private int IsFactorialOfAnyDigit(int numA)
+    {
+        string numBString = numA.ToString();
+
+        foreach (char numCChar in numBString)
+        {
+            int numD = int.Parse(numCChar.ToString());
+            if (numA == Factorial(numD))
+            {
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+
+    private int Factorial(int numE)
+    {
+        if (numE == 0 || numE == 1)
+        {
+            return 1;
+        }
+
+        int numF = 1;
+        for (int numG = 2; numG <= numE; numG++)
+        {
+            numF *= numG;
+        }
+
+        return numF;
+    }
+}

@@ -1,0 +1,54 @@
+@page "/ej025"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba una matriz 5 por 5 y retorne la cantidad de veces que se repite su moda.</h5>
+
+@for (int i = 0; i < 5; i++)
+{
+    <div>
+        @for (int j = 0; j < 5; j++)
+        {
+            <input @bind="numArray[i, j]" type="number" placeholder="Ingresa un número" />
+        }
+    </div>
+}
+
+<button @onclick="FindModeFrequency">Encontrar frecuencia de la moda</button>
+
+<p>La cantidad de veces que se repite la moda es: @modeFrequency</p>
+
+@code {
+    private int[,] numArray = new int[5, 5];
+    private int modeFrequency;
+
+    private void FindModeFrequency()
+    {
+        modeFrequency = GetModeFrequency(numArray);
+    }
+
+    private int GetModeFrequency(int[,] numA)
+    {
+        var numB = new Dictionary<int, int>();
+
+        
+        for (int numC = 0; numC < numA.GetLength(0); numC++)
+        {
+            for (int numD = 0; numD < numA.GetLength(1); numD++)
+            {
+                int numE = numA[numC, numD];
+                if (numB.ContainsKey(numE))
+                {
+                    numB[numE]++;
+                }
+                else
+                {
+                    numB[numE] = 1;
+                }
+            }
+        }
+
+        
+        int numF = numB.Values.Max();
+        return numF;
+    }
+}

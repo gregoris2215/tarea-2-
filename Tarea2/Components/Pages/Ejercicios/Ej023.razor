@@ -1,0 +1,48 @@
+@page "/ej023"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro una matriz 4x4 entera que retorne el número de fila donde se encuentre por primera vez el número mayor de la matriz.</h5>
+
+@for (int i = 0; i < 4; i++)
+{
+    <div>
+        @for (int j = 0; j < 4; j++)
+        {
+            <input @bind="numArray[i, j]" type="number" placeholder="Ingresa un número" />
+        }
+    </div>
+}
+
+<button @onclick="FindMaxValueRow">Encontrar fila del mayor valor</button>
+
+<p>La fila del mayor valor es: @maxValueRow</p>
+
+@code {
+    private int[,] numArray = new int[4, 4];
+    private int maxValueRow;
+
+    private void FindMaxValueRow()
+    {
+        maxValueRow = GetMaxValueRow(numArray);
+    }
+
+    private int GetMaxValueRow(int[,] numA)
+    {
+        int numB = int.MinValue;
+        int numC = -1;
+
+        for (int numD = 0; numD < numA.GetLength(0); numD++)
+        {
+            for (int numE = 0; numE < numA.GetLength(1); numE++)
+            {
+                if (numA[numD, numE] > numB)
+                {
+                    numB = numA[numD, numE];
+                    numC = numD;
+                }
+            }
+        }
+
+        return numC;
+    }
+}

@@ -1,0 +1,41 @@
+@page "/ej04"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y retorne 1 si dicho entero está entre los 30 primeros elementos de la serie de fibonacci debería retornar al 0 si no es así.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<button @onclick="CheckFibonacci">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int result;
+
+    private void CheckFibonacci()
+    {
+        result = IsInFibonacciSeries(numA);
+    }
+
+    private int IsInFibonacciSeries(int numA)
+    {
+        int[] fibonacciSeries = new int[30];
+        fibonacciSeries[0] = 0;
+        fibonacciSeries[1] = 1;
+
+        for (int numB = 2; numB < 30; numB++)
+        {
+            fibonacciSeries[numB] = fibonacciSeries[numB - 1] + fibonacciSeries[numB - 2];
+        }
+
+        for (int numC = 0; numC < 30; numC++)
+        {
+            if (fibonacciSeries[numC] == numA)
+            {
+                return 1;
+            }
+        }
+
+        return 0;
+    }
+}

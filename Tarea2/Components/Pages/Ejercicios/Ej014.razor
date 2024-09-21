@@ -1,0 +1,46 @@
+@page "/ej014"
+@rendermode InteractiveServer
+
+<h5> Construir una función que reciba como parámetro un vector de 10 posiciones enteras y retorne la cantidad de números primos almacenados en el vector.</h5>
+
+@for (int i = 0; i < 10; i++)
+{
+    <input @bind="numArray[i]" type="number" placeholder="Ingresa un número" />
+}
+
+<button @onclick="CountPrimes">Contar números primos</button>
+
+<p>La cantidad de números primos es: @primeCount</p>
+
+@code {
+    private int[] numArray = new int[10];
+    private int primeCount;
+
+    private void CountPrimes()
+    {
+        primeCount = GetPrimeCount(numArray);
+    }
+
+    private int GetPrimeCount(int[] numA)
+    {
+        int numB = 0;
+        foreach (int numC in numA)
+        {
+            if (IsPrime(numC))
+            {
+                numB++;
+            }
+        }
+        return numB;
+    }
+
+    private bool IsPrime(int numD)
+    {
+        if (numD <= 1) return false;
+        for (int numE = 2; numE <= Math.Sqrt(numD); numE++)
+        {
+            if (numD % numE == 0) return false;
+        }
+        return true;
+    }
+}

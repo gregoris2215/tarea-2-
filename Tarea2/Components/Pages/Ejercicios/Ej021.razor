@@ -1,0 +1,60 @@
+@page "/ej021"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro una matriz de 3x4 entera y retorne la cantidad de veces que se repite el mayor dato de la matriz.</h5>
+
+@for (int i = 0; i < 3; i++)
+{
+    <div>
+        @for (int j = 0; j < 4; j++)
+        {
+            <input @bind="numArray[i, j]" type="number" placeholder="Ingresa un número" />
+        }
+    </div>
+}
+
+<button @onclick="FindMaxValueFrequency">Encontrar frecuencia del mayor valor</button>
+
+<p>La cantidad de veces que se repite el mayor valor es: @maxValueFrequency</p>
+
+@code {
+    private int[,] numArray = new int[3, 4];
+    private int maxValueFrequency;
+
+    private void FindMaxValueFrequency()
+    {
+        maxValueFrequency = GetMaxValueFrequency(numArray);
+    }
+
+    private int GetMaxValueFrequency(int[,] numA)
+    {
+        int numB = int.MinValue;
+        int numC = 0;
+
+        
+        for (int numD = 0; numD < numA.GetLength(0); numD++)
+        {
+            for (int numE = 0; numE < numA.GetLength(1); numE++)
+            {
+                if (numA[numD, numE] > numB)
+                {
+                    numB = numA[numD, numE];
+                }
+            }
+        }
+
+        
+        for (int numF = 0; numF < numA.GetLength(0); numF++)
+        {
+            for (int numG = 0; numG < numA.GetLength(1); numG++)
+            {
+                if (numA[numF, numG] == numB)
+                {
+                    numC++;
+                }
+            }
+        }
+
+        return numC;
+    }
+}

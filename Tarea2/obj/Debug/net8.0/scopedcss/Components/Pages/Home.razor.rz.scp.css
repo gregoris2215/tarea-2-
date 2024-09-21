@@ -1,0 +1,37 @@
+.btn[b-rc1mr1oxk1] {
+    color: black;
+    background-color: #4CAF50; /* Verde */
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0, 128, 0, 0.5), 0 0 10px rgba(0, 255, 127, 0.5); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative; 
+    margin: 10px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.btn[b-rc1mr1oxk1]::after {
+    content: "";
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: -50px;
+    left: -100px;
+    background: #FF5733; /* Naranja */
+    background-image: linear-gradient(-225deg, #FF5733 0%, #FFC300 29%, #DAF7A6 67%, #33FF57 100%);
+    z-index: -1;
+    transition: transform 0.5s ease;
+}
+
+.btn:hover[b-rc1mr1oxk1] {
+    transform: translate(0, -6px);
+    box-shadow: 10px -10px 25px rgba(255, 165, 0, 0.5), -10px 10px 25px rgba(50, 205, 50, 0.7);
+}
+
+.btn:hover[b-rc1mr1oxk1]::after {
+    transform: rotate(150deg); 
+}
+

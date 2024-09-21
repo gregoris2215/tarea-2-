@@ -1,0 +1,37 @@
+@page "/ej02"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro un entero y retorne la cantidad de dígitos pares.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<button @onclick="CountEvenDigits">Contar dígitos pares</button>
+
+<p>La cantidad de dígitos pares es: @numB</p>
+
+@code {
+    private int numA;
+    private int numB;
+
+    private void CountEvenDigits()
+    {
+        numB = GetEvenDigitCount(numA);
+    }
+
+    private int GetEvenDigitCount(int number)
+    {
+        int count = 0;
+        number = Math.Abs(number); 
+
+        while (number > 0)
+        {
+            int digit = number % 10;
+            if (digit % 2 == 0)
+            {
+                count++;
+            }
+            number /= 10;
+        }
+
+        return count;
+    }
+}

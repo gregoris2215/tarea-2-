@@ -1,0 +1,61 @@
+@page "/ej024"
+@rendermode InteractiveServer
+
+<h5>Construir una función que reciba como parámetro una matriz 4 x 4 en tela y retro en la posición exacta en donde se encuentre almacenado en mayor número primo.</h5>
+
+@for (int i = 0; i < 4; i++)
+{
+    <div>
+        @for (int j = 0; j < 4; j++)
+        {
+            <input @bind="numArray[i, j]" type="number" placeholder="Ingresa un número" />
+        }
+    </div>
+}
+
+<button @onclick="FindMaxPrimePosition">Encontrar posición del mayor primo</button>
+
+<p>La posición del mayor número primo es: (@maxPrimeRow, @maxPrimeCol)</p>
+
+@code {
+    private int[,] numArray = new int[4, 4];
+    private int maxPrimeRow = -1;
+    private int maxPrimeCol = -1;
+
+    private void FindMaxPrimePosition()
+    {
+        (maxPrimeRow, maxPrimeCol) = GetMaxPrimePosition(numArray);
+    }
+
+    private (int, int) GetMaxPrimePosition(int[,] numA)
+    {
+        int numB = int.MinValue;
+        int numC = -1;
+        int numD = -1;
+
+        for (int numE = 0; numE < numA.GetLength(0); numE++)
+        {
+            for (int numF = 0; numF < numA.GetLength(1); numF++)
+            {
+                if (IsPrime(numA[numE, numF]) && numA[numE, numF] > numB)
+                {
+                    numB = numA[numE, numF];
+                    numC = numE;
+                    numD = numF;
+                }
+            }
+        }
+
+        return (numC, numD);
+    }
+
+    private bool IsPrime(int numG)
+    {
+        if (numG <= 1) return false;
+        for (int numH = 2; numH <= Math.Sqrt(numG); numH++)
+        {
+            if (numG % numH == 0) return false;
+        }
+        return true;
+    }
+}

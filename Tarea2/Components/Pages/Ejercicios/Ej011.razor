@@ -1,0 +1,24 @@
+@page "/ej011"
+@rendermode InteractiveServer
+
+<h5> Construir una función que reciba como parámetro un enteros y retorna 1 si Dicho valor es múltiplo de 5 deberá retornar 0 si no es así.</h5>
+
+<input @bind="numA" type="number" placeholder="Ingresa un número" />
+<button @onclick="CheckMultipleOfFive">Verificar</button>
+
+<p>El resultado es: @result</p>
+
+@code {
+    private int numA;
+    private int result;
+
+    private void CheckMultipleOfFive()
+    {
+        result = IsMultipleOfFive(numA);
+    }
+
+    private int IsMultipleOfFive(int numA)
+    {
+        return numA % 5 == 0 ? 1 : 0;
+    }
+}
